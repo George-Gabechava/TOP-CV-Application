@@ -1,0 +1,32 @@
+/* make this grid */
+#root {
+  display: grid;
+  max-width: 4000px;
+  grid-template-columns: 38vw 58vw;
+  column-gap: 2vw;
+  /* margin: 0 auto; */
+  margin: 2vw;
+}
+
+#root h1 {
+  font-size: 2rem;
+}
+
+#root h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#personalBox {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;   */
+}
+
+#rightContainer {
+  background-color: lightgray;
+}
+
+
+/* @media */
+
