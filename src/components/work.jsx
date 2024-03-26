@@ -74,16 +74,16 @@ export default function Work({ onSubmit, workInfo, setWorkInfo }) {
         </label>
         <label>
           <h3>Final Year:</h3>
-          <input type="number" value={finalYear} onChange={(e) => setfinalYear(e.target.value)} />
+          <input type="text" value={finalYear} onChange={(e) => setfinalYear(e.target.value)} />
         </label>
         <label>
           <h3>Job Description / Main Responsibilities:</h3>
-          <input type="text" className="textArea" value={description} onChange={(e) => setDescription(e.target.value)} />
+          <textarea className="textArea" value={description} onChange={(e) => setDescription(e.target.value)} />
         </label>
-        <button type="submit">Submit</button>
+        <button className='submitButton' type="submit">Submit</button>
       </form>
       
-      <div>
+      <div className='subHeader'>
         <h2>Work Submissions:</h2>
         {workInfo.map((info, index) => (
           <div key={index}>
@@ -92,8 +92,10 @@ export default function Work({ onSubmit, workInfo, setWorkInfo }) {
             <p>First Year: {info.firstYear}</p>
             <p>Final Year: {info.finalYear}</p>
             <p>Description: {info.description}</p>
-            <button onClick={() => handleEdit(index)}>Edit</button>
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <div className='buttonContainer'>
+            <button className='editButton' onClick={() => handleEdit(index)}>Edit</button>
+            <button className='deleteButton' onClick={() => handleDelete(index)}>Delete</button>
+            </div>
             <hr />
           </div>
         ))}

@@ -1,0 +1,110 @@
+/* make the grid */
+#root {
+  display: grid;
+  max-width: 4000px;
+  grid-template-columns: 36vw 58vw;
+  column-gap: 2vw;
+  padding: 2vw;
+  background-color: #add8e6;
+}
+
+/* Left Side of Page */
+
+#root h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#root h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#personalBox, #educationBox, #workBox, form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+#personalBox {
+  border-bottom: 3px double gray;
+}
+
+.headers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  font-weight: 700;
+  font-size: large;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  background-color: #ffffe0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.submitButton {
+  margin-top: 15px;
+}
+
+.deleteButton {
+  background-color: #E72323;
+  color: #ffffff;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+input {
+  max-width: 100%;
+}
+
+#leftContainer {
+  background-color: lightblue;
+}
+
+.subHeader h2 {
+  text-align: center;
+}
+
+.textArea {
+  width: 100%;
+  height: 150px;
+  overflow-y: scroll;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Side of Page */
+
+#rightContainer {
+  padding: 10px;
+  text-align: center;
+  border-left: solid 5px lightgray;
+  background-color: white;
+  margin-right: 2vw;
+}
+
+.preformatted {
+  font-family:'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+.icons {
+  height: 2em;
+  margin-right: 1em;
+}
+

@@ -9,7 +9,7 @@ const Personal = ({ personalInfo, setPersonalInfo }) => {
   return (
     <div id='personalBox'>
       <h1>Personal Details</h1>
-      <h2 id='fullName'>Full Name <p>*required</p> </h2> 
+      <h2 id='fullName'>Full Name </h2> 
       <input
         type="text"
         name="fullname"

@@ -66,18 +66,20 @@ export default function Education({ onSubmit, educationInfo, setEducationInfo })
           <h3>Graduation Year:</h3>
           <input type="text" value={gradYear} onChange={(e) => setGradYear(e.target.value)} />
         </label>
-        <button type="submit">Submit</button>
+        <button className='submitButton' type="submit">Submit</button>
       </form>
       
-      <div>
+      <div className='subHeader'>
         <h2>Education Submissions:</h2>
         {educationInfo.map((info, index) => (
           <div key={index}>
             <p>University: {info.university}</p>
             <p>Degree: {info.major}</p>
             <p>Graduation Year: {info.gradYear}</p>
-            <button onClick={() => handleEdit(index)}>Edit</button>
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <div className='buttonContainer'>
+            <button className='editButton' onClick={() => handleEdit(index)}>Edit</button>
+            <button className='deleteButton' onClick={() => handleDelete(index)}>Delete</button>
+            </div>
             <hr />
           </div>
         ))}
