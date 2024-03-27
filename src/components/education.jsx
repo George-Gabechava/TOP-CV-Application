@@ -39,14 +39,17 @@ export default function Education({ onSubmit, educationInfo, setEducationInfo })
     setUniversity(editedEducation.university);
     setMajor(editedEducation.major);
     setGradYear(editedEducation.gradYear);
-    setEducationInfo(prevState =>
-      prevState.filter((_, i) => i !== index)
-    );
+    // Remove the existing entry from the educationInfo array
+    const updatedEducationInfo = [...educationInfo];
+    updatedEducationInfo.splice(index, 1);
+
+    // Update the state with the edited entry
+    setEducationInfo(updatedEducationInfo);
   };
 
   const handleDelete = (index) => {
     setEducationInfo(prevState =>
-      prevState.filter((_, i) => i !== index)
+      prevState.filter((x, i) => i !== index)
     );
   };
 
